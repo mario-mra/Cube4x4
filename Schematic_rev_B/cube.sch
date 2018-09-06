@@ -1,0 +1,1222 @@
+EESchema Schematic File Version 4
+LIBS:cube-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title "Cube RGB 4x4"
+Date "31/08/2018"
+Rev "B"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2850 2600 700  200 
+U 5AE441DB
+F0 "Power" 60
+F1 "power.sch" 60
+F2 "Vin" I L 2850 2700 60 
+F3 "Vout" O R 3550 2750 60 
+F4 "V5" O R 3550 2650 60 
+$EndSheet
+$Sheet
+S 2850 3000 1100 450 
+U 5AE443CC
+F0 "USB_UART" 60
+F1 "USB_UART.sch" 60
+F2 "Vbus" I L 2850 3050 60 
+F3 "nRST" I R 3950 3350 60 
+F4 "GPIO0" I R 3950 3250 60 
+F5 "RX" I R 3950 3050 60 
+F6 "TX" O R 3950 3150 60 
+F7 "D+" B L 2850 3150 60 
+F8 "D-" B L 2850 3250 60 
+$EndSheet
+$Comp
+L cube-rescue:USB_B J2
+U 1 1 5AE536A8
+P 1200 2900
+F 0 "J2" H 1000 3350 50  0000 L CNN
+F 1 "USB_B" H 1000 3250 50  0000 L CNN
+F 2 "footprint:Micro_USB_Female_Ali" H 1350 2850 50  0001 C CNN
+F 3 "" H 1350 2850 50  0001 C CNN
+	1    1200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L cube-rescue:Conn_01x02 J1
+U 1 1 5AE538DB
+P 1050 2300
+F 0 "J1" H 1050 2000 50  0000 C CNN
+F 1 "Conn_01x02" H 1050 2100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1050 2300 50  0001 C CNN
+F 3 "" H 1050 2300 50  0001 C CNN
+	1    1050 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:GND #PWR01
+U 1 1 5AE54721
+P 1200 3400
+F 0 "#PWR01" H 1200 3150 50  0001 C CNN
+F 1 "GND" H 1200 3250 50  0000 C CNN
+F 2 "" H 1200 3400 50  0001 C CNN
+F 3 "" H 1200 3400 50  0001 C CNN
+	1    1200 3400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1100 3300
+$Comp
+L cube-rescue:GND #PWR02
+U 1 1 5AE54AED
+P 1250 2350
+F 0 "#PWR02" H 1250 2100 50  0001 C CNN
+F 1 "GND" H 1250 2200 50  0000 C CNN
+F 2 "" H 1250 2350 50  0001 C CNN
+F 3 "" H 1250 2350 50  0001 C CNN
+	1    1250 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cube-rescue:ESP-12E U1
+U 1 1 5AE56255
+P 5900 3150
+F 0 "U1" H 5900 3050 50  0000 C CNN
+F 1 "ESP-12E" H 5900 3250 50  0000 C CNN
+F 2 "RF_Modules:ESP-12E" H 5900 3150 50  0001 C CNN
+F 3 "" H 5900 3150 50  0001 C CNN
+	1    5900 3150
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 8500 2950 1500 1050
+U 5AE56632
+F0 "LED_controller" 60
+F1 "LED_controller.sch" 60
+F2 "SCLK" I L 8500 3000 60 
+F3 "SIN" I L 8500 3100 60 
+F4 "GSCLK" I L 8500 3250 60 
+F5 "BLANK" I L 8500 3500 60 
+F6 "XLAT" I L 8500 3400 60 
+F7 "IN_1" O L 8500 3750 60 
+F8 "IN_0" O L 8500 3650 60 
+F9 "IN_2" O L 8500 3850 60 
+F10 "IN_3" O L 8500 3950 60 
+F11 "B[0..15]" O R 10000 3450 60 
+F12 "R[0..15]" O R 10000 3250 60 
+F13 "G[0..15]" O R 10000 3350 60 
+F14 "A[0..3]" O R 10000 3550 60 
+$EndSheet
+$Comp
+L cube-rescue:Conn_01x16 J3
+U 1 1 5AE5E7B5
+P 10900 1550
+F 0 "J3" H 10900 2350 50  0000 C CNN
+F 1 "RED_conn" H 10900 650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x16_Pitch2.54mm" H 10900 1550 50  0001 C CNN
+F 3 "" H 10900 1550 50  0001 C CNN
+	1    10900 1550
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	10450 750  10550 850 
+Entry Wire Line
+	10450 850  10550 950 
+Entry Wire Line
+	10450 950  10550 1050
+Entry Wire Line
+	10450 1050 10550 1150
+Entry Wire Line
+	10450 1150 10550 1250
+Entry Wire Line
+	10450 1250 10550 1350
+Entry Wire Line
+	10450 1350 10550 1450
+Entry Wire Line
+	10450 1450 10550 1550
+Entry Wire Line
+	10450 1550 10550 1650
+Entry Wire Line
+	10450 1650 10550 1750
+Entry Wire Line
+	10450 1750 10550 1850
+Entry Wire Line
+	10450 1850 10550 1950
+Entry Wire Line
+	10450 1950 10550 2050
+Entry Wire Line
+	10450 2050 10550 2150
+Entry Wire Line
+	10450 2150 10550 2250
+Entry Wire Line
+	10450 2250 10550 2350
+Text Label 10550 850  0    60   ~ 0
+R0
+Text Label 10550 950  0    60   ~ 0
+R1
+Text Label 10550 1050 0    60   ~ 0
+R2
+Text Label 10550 1150 0    60   ~ 0
+R3
+Text Label 10550 1250 0    60   ~ 0
+R4
+Text Label 10550 1350 0    60   ~ 0
+R5
+Text Label 10550 1450 0    60   ~ 0
+R6
+Text Label 10550 1550 0    60   ~ 0
+R7
+Text Label 10550 1650 0    60   ~ 0
+R8
+Text Label 10550 1750 0    60   ~ 0
+R9
+Text Label 10550 1850 0    60   ~ 0
+R10
+Text Label 10550 1950 0    60   ~ 0
+R11
+Text Label 10550 2050 0    60   ~ 0
+R12
+Text Label 10550 2150 0    60   ~ 0
+R13
+Text Label 10550 2250 0    60   ~ 0
+R14
+Text Label 10550 2350 0    60   ~ 0
+R15
+$Comp
+L cube-rescue:Conn_01x16 J4
+U 1 1 5AE62465
+P 10900 3350
+F 0 "J4" H 10900 4150 50  0000 C CNN
+F 1 "GREEN_conn" H 10900 2450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x16_Pitch2.54mm" H 10900 3350 50  0001 C CNN
+F 3 "" H 10900 3350 50  0001 C CNN
+	1    10900 3350
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	10450 2550 10550 2650
+Entry Wire Line
+	10450 2650 10550 2750
+Entry Wire Line
+	10450 2750 10550 2850
+Entry Wire Line
+	10450 2850 10550 2950
+Entry Wire Line
+	10450 2950 10550 3050
+Entry Wire Line
+	10450 3050 10550 3150
+Entry Wire Line
+	10450 3150 10550 3250
+Entry Wire Line
+	10450 3250 10550 3350
+Entry Wire Line
+	10450 3350 10550 3450
+Entry Wire Line
+	10450 3450 10550 3550
+Entry Wire Line
+	10450 3550 10550 3650
+Entry Wire Line
+	10450 3650 10550 3750
+Entry Wire Line
+	10450 3750 10550 3850
+Entry Wire Line
+	10450 3850 10550 3950
+Entry Wire Line
+	10450 3950 10550 4050
+Entry Wire Line
+	10450 4050 10550 4150
+$Comp
+L cube-rescue:Conn_01x16 J5
+U 1 1 5AE62587
+P 10900 5150
+F 0 "J5" H 10900 5950 50  0000 C CNN
+F 1 "BLUE_conn" H 10900 4250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x16_Pitch2.54mm" H 10900 5150 50  0001 C CNN
+F 3 "" H 10900 5150 50  0001 C CNN
+	1    10900 5150
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	10450 4350 10550 4450
+Entry Wire Line
+	10450 4450 10550 4550
+Entry Wire Line
+	10450 4550 10550 4650
+Entry Wire Line
+	10450 4650 10550 4750
+Entry Wire Line
+	10450 4750 10550 4850
+Entry Wire Line
+	10450 4850 10550 4950
+Entry Wire Line
+	10450 4950 10550 5050
+Entry Wire Line
+	10450 5050 10550 5150
+Entry Wire Line
+	10450 5150 10550 5250
+Entry Wire Line
+	10450 5250 10550 5350
+Entry Wire Line
+	10450 5350 10550 5450
+Entry Wire Line
+	10450 5450 10550 5550
+Entry Wire Line
+	10450 5550 10550 5650
+Entry Wire Line
+	10450 5650 10550 5750
+Entry Wire Line
+	10450 5750 10550 5850
+Entry Wire Line
+	10450 5850 10550 5950
+Text Label 10550 4450 0    60   ~ 0
+B0
+Text Label 10550 4550 0    60   ~ 0
+B1
+Text Label 10550 4650 0    60   ~ 0
+B2
+Text Label 10550 4750 0    60   ~ 0
+B3
+Text Label 10550 4850 0    60   ~ 0
+B4
+Text Label 10550 4950 0    60   ~ 0
+B5
+Text Label 10550 5050 0    60   ~ 0
+B6
+Text Label 10550 5150 0    60   ~ 0
+B7
+Text Label 10550 5250 0    60   ~ 0
+B8
+Text Label 10550 5350 0    60   ~ 0
+B9
+Text Label 10550 5450 0    60   ~ 0
+B10
+Text Label 10550 5550 0    60   ~ 0
+B11
+Text Label 10550 5650 0    60   ~ 0
+B12
+Text Label 10550 5750 0    60   ~ 0
+B13
+Text Label 10550 5850 0    60   ~ 0
+B14
+Text Label 10550 5950 0    60   ~ 0
+B15
+$Comp
+L cube-rescue:GND #PWR03
+U 1 1 5AE6ABAA
+P 4700 3800
+F 0 "#PWR03" H 4700 3550 50  0001 C CNN
+F 1 "GND" H 4700 3650 50  0000 C CNN
+F 2 "" H 4700 3800 50  0001 C CNN
+F 3 "" H 4700 3800 50  0001 C CNN
+	1    4700 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4000 3350 2    60   Output ~ 0
+nRST
+Text GLabel 5900 2000 3    60   Input ~ 0
+nRST
+$Comp
+L cube-rescue:CP_Small C2
+U 1 1 5AE6B43A
+P 6850 3700
+F 0 "C2" H 6860 3770 50  0000 L CNN
+F 1 "22uF" H 6860 3620 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Reflow" H 6850 3700 50  0001 C CNN
+F 3 "" H 6850 3700 50  0001 C CNN
+F 4 "Tantalum" H 6850 3700 60  0001 C CNN "Type"
+	1    6850 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L cube-rescue:GND #PWR04
+U 1 1 5AE6B7A5
+P 6850 3850
+F 0 "#PWR04" H 6850 3600 50  0001 C CNN
+F 1 "GND" H 6850 3700 50  0000 C CNN
+F 2 "" H 6850 3850 50  0001 C CNN
+F 3 "" H 6850 3850 50  0001 C CNN
+	1    6850 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L cube-rescue:R_Small R1
+U 1 1 5AE6CE2F
+P 4700 3600
+F 0 "R1" H 4730 3620 50  0000 L CNN
+F 1 "12k" H 4730 3560 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 4700 3600 50  0001 C CNN
+F 3 "" H 4700 3600 50  0001 C CNN
+	1    4700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L cube-rescue:C_Small C1
+U 1 1 5AE6EB1D
+P 6050 2050
+F 0 "C1" H 6060 2120 50  0000 L CNN
+F 1 "100nF" H 6100 2000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 6050 2050 50  0001 C CNN
+F 3 "" H 6050 2050 50  0001 C CNN
+F 4 "Ceramic" H 6050 2050 60  0001 C CNN "Type"
+	1    6050 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L cube-rescue:GND #PWR05
+U 1 1 5AE6ECC6
+P 6050 2200
+F 0 "#PWR05" H 6050 1950 50  0001 C CNN
+F 1 "GND" H 6050 2050 50  0000 C CNN
+F 2 "" H 6050 2200 50  0001 C CNN
+F 3 "" H 6050 2200 50  0001 C CNN
+	1    6050 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 4950 3050 0    60   BiDi ~ 0
+GPIO5
+Text GLabel 4600 3150 0    60   BiDi ~ 0
+GPIO4
+Text GLabel 4950 3350 0    60   BiDi ~ 0
+GPIO2
+Text GLabel 4400 3350 3    60   BiDi ~ 0
+GPIO0
+Text GLabel 6850 3150 2    60   BiDi ~ 0
+GPIO16
+Text GLabel 7250 3250 2    60   BiDi ~ 0
+GPIO14
+Text GLabel 6850 3350 2    60   BiDi ~ 0
+GPIO12
+Text GLabel 7250 3450 2    60   BiDi ~ 0
+GPIO13
+Text GLabel 6450 1850 2    60   Input ~ 0
+V3.3
+$Comp
+L cube-rescue:R_Small R4
+U 1 1 5AE73534
+P 6250 1600
+F 0 "R4" H 6280 1620 50  0000 L CNN
+F 1 "12k" H 6280 1560 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 6250 1600 50  0001 C CNN
+F 3 "" H 6250 1600 50  0001 C CNN
+	1    6250 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L cube-rescue:R_Small R5
+U 1 1 5AE73618
+P 6250 1850
+F 0 "R5" H 6280 1870 50  0000 L CNN
+F 1 "12k" H 6280 1810 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 6250 1850 50  0001 C CNN
+F 3 "" H 6250 1850 50  0001 C CNN
+	1    6250 1850
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7250 3050 2    60   BiDi ~ 0
+CH_PD
+Text GLabel 6850 2950 2    60   BiDi ~ 0
+ADC
+Text GLabel 7250 2850 2    60   BiDi ~ 0
+REST
+Text GLabel 5850 1600 0    60   BiDi ~ 0
+CH_PD
+Text GLabel 5850 1850 0    60   BiDi ~ 0
+REST
+Text GLabel 5650 4100 3    60   BiDi ~ 0
+SCLK
+Text GLabel 5750 4500 3    60   BiDi ~ 0
+MOSI
+Text GLabel 5850 4100 3    60   BiDi ~ 0
+GPIO10
+Text GLabel 5950 4500 3    60   BiDi ~ 0
+GPIO9
+Text GLabel 6050 4100 3    60   BiDi ~ 0
+MISO
+Text GLabel 6150 4500 3    60   BiDi ~ 0
+CSO
+Text GLabel 4550 3500 3    60   BiDi ~ 0
+GPIO15
+$Comp
+L cube-rescue:R_Small R3
+U 1 1 5AE82BF7
+P 6250 1350
+F 0 "R3" H 6280 1370 50  0000 L CNN
+F 1 "12k" H 6280 1310 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 6250 1350 50  0001 C CNN
+F 3 "" H 6250 1350 50  0001 C CNN
+	1    6250 1350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5850 1350 0    60   BiDi ~ 0
+GPIO2
+Text GLabel 5850 1100 0    60   BiDi ~ 0
+GPIO0
+$Comp
+L cube-rescue:R_Small R2
+U 1 1 5AE82DC1
+P 6250 1100
+F 0 "R2" H 6280 1120 50  0000 L CNN
+F 1 "12k" H 6280 1060 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 6250 1100 50  0001 C CNN
+F 3 "" H 6250 1100 50  0001 C CNN
+	1    6250 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L cube-rescue:Jumper JP1
+U 1 1 5AE83E90
+P 4450 1650
+F 0 "JP1" H 4450 1800 50  0000 C CNN
+F 1 "Jumper" H 4450 1570 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch1.00mm" H 4450 1650 50  0001 C CNN
+F 3 "" H 4450 1650 50  0001 C CNN
+	1    4450 1650
+	1    0    0    -1  
+$EndComp
+Text Notes 3850 1400 0    60   ~ 0
+Connect to enable wakeup\n
+Text GLabel 4050 1700 3    60   BiDi ~ 0
+GPIO16
+Text GLabel 4850 1700 3    60   BiDi ~ 0
+REST
+$Comp
+L cube-rescue:SW_SPDT SW1
+U 1 1 5AE8AAE8
+P 1900 2600
+F 0 "SW1" H 1900 2770 50  0000 C CNN
+F 1 "SW_SPDT" H 1900 2400 50  0000 C CNN
+F 2 "footprint:Switch_1P2T_SPDT_Ali" H 1900 2600 50  0001 C CNN
+F 3 "" H 1900 2600 50  0001 C CNN
+	1    1900 2600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2100 2500
+$Comp
+L cube-rescue:TEST TP1
+U 1 1 5AE8C881
+P 1950 6900
+F 0 "TP1" H 1950 7200 50  0000 C BNN
+F 1 "TP_GPIO0" H 1950 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 1950 6900 50  0001 C CNN
+F 3 "" H 1950 6900 50  0001 C CNN
+	1    1950 6900
+	-1   0    0    1   
+$EndComp
+Text GLabel 1950 6800 1    60   BiDi ~ 0
+GPIO0
+Text GLabel 2150 6800 1    60   BiDi ~ 0
+GPIO2
+Text GLabel 2350 6800 1    60   BiDi ~ 0
+GPIO4
+Text GLabel 2550 6800 1    60   BiDi ~ 0
+GPIO5
+Text GLabel 2750 6800 1    60   BiDi ~ 0
+GPIO9
+Text GLabel 2950 6800 1    60   BiDi ~ 0
+GPIO10
+Text GLabel 3150 6800 1    60   BiDi ~ 0
+GPIO12
+Text GLabel 3350 6800 1    60   BiDi ~ 0
+GPIO13
+Text GLabel 3550 6800 1    60   BiDi ~ 0
+GPIO14
+Text GLabel 3750 6800 1    60   BiDi ~ 0
+GPIO16
+$Comp
+L cube-rescue:TEST TP2
+U 1 1 5AE8D963
+P 2150 7200
+F 0 "TP2" H 2150 7500 50  0000 C BNN
+F 1 "TP_GPIO2" H 2150 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2150 7200 50  0001 C CNN
+F 3 "" H 2150 7200 50  0001 C CNN
+	1    2150 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP3
+U 1 1 5AE8DB76
+P 2350 6900
+F 0 "TP3" H 2350 7200 50  0000 C BNN
+F 1 "TP_GPIO4" H 2350 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2350 6900 50  0001 C CNN
+F 3 "" H 2350 6900 50  0001 C CNN
+	1    2350 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP4
+U 1 1 5AE8DEF3
+P 2550 7200
+F 0 "TP4" H 2550 7500 50  0000 C BNN
+F 1 "TP_GPIO5" H 2550 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2550 7200 50  0001 C CNN
+F 3 "" H 2550 7200 50  0001 C CNN
+	1    2550 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP5
+U 1 1 5AE8DFB5
+P 2750 6900
+F 0 "TP5" H 2750 7200 50  0000 C BNN
+F 1 "TP_GPIO9" H 2750 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2750 6900 50  0001 C CNN
+F 3 "" H 2750 6900 50  0001 C CNN
+	1    2750 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP6
+U 1 1 5AE8E076
+P 2950 7200
+F 0 "TP6" H 2950 7500 50  0000 C BNN
+F 1 "TP_GPIO10" H 2950 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2950 7200 50  0001 C CNN
+F 3 "" H 2950 7200 50  0001 C CNN
+	1    2950 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP7
+U 1 1 5AE8E13A
+P 3150 6900
+F 0 "TP7" H 3150 7200 50  0000 C BNN
+F 1 "TP_GPIO12" H 3150 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3150 6900 50  0001 C CNN
+F 3 "" H 3150 6900 50  0001 C CNN
+	1    3150 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP8
+U 1 1 5AE8E20D
+P 3350 7200
+F 0 "TP8" H 3350 7500 50  0000 C BNN
+F 1 "TP_GPIO13" H 3350 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3350 7200 50  0001 C CNN
+F 3 "" H 3350 7200 50  0001 C CNN
+	1    3350 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP9
+U 1 1 5AE8E2D7
+P 3550 6900
+F 0 "TP9" H 3550 7200 50  0000 C BNN
+F 1 "TP_GPIO14" H 3550 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3550 6900 50  0001 C CNN
+F 3 "" H 3550 6900 50  0001 C CNN
+	1    3550 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP10
+U 1 1 5AE8E3A4
+P 3750 7200
+F 0 "TP10" H 3750 7500 50  0000 C BNN
+F 1 "TP_GPIO16" H 3750 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3750 7200 50  0001 C CNN
+F 3 "" H 3750 7200 50  0001 C CNN
+	1    3750 7200
+	-1   0    0    1   
+$EndComp
+Text GLabel 3950 6800 1    60   BiDi ~ 0
+REST
+$Comp
+L cube-rescue:TEST TP11
+U 1 1 5AE90E27
+P 3950 6900
+F 0 "TP11" H 3950 7200 50  0000 C BNN
+F 1 "TP_REST" H 3950 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3950 6900 50  0001 C CNN
+F 3 "" H 3950 6900 50  0001 C CNN
+	1    3950 6900
+	-1   0    0    1   
+$EndComp
+Text GLabel 4150 6800 1    60   BiDi ~ 0
+ADC
+Text GLabel 4350 6800 1    60   BiDi ~ 0
+CH_PD
+Text GLabel 4550 6800 1    60   BiDi ~ 0
+SCLK
+Text GLabel 4750 6800 1    60   BiDi ~ 0
+MOSI
+Text GLabel 4950 6800 1    60   BiDi ~ 0
+MISO
+Text GLabel 5150 6800 1    60   BiDi ~ 0
+CSO
+$Comp
+L cube-rescue:TEST TP12
+U 1 1 5AE94369
+P 4150 7200
+F 0 "TP12" H 4150 7500 50  0000 C BNN
+F 1 "TP_ADC" H 4150 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4150 7200 50  0001 C CNN
+F 3 "" H 4150 7200 50  0001 C CNN
+	1    4150 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP13
+U 1 1 5AE9444D
+P 4350 6900
+F 0 "TP13" H 4350 7200 50  0000 C BNN
+F 1 "TP_CH_PD" H 4350 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4350 6900 50  0001 C CNN
+F 3 "" H 4350 6900 50  0001 C CNN
+	1    4350 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP14
+U 1 1 5AE9452C
+P 4550 7200
+F 0 "TP14" H 4550 7500 50  0000 C BNN
+F 1 "TP_SCLK" H 4550 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4550 7200 50  0001 C CNN
+F 3 "" H 4550 7200 50  0001 C CNN
+	1    4550 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP15
+U 1 1 5AE9461A
+P 4750 6900
+F 0 "TP15" H 4750 7200 50  0000 C BNN
+F 1 "TP_MOSI" H 4750 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4750 6900 50  0001 C CNN
+F 3 "" H 4750 6900 50  0001 C CNN
+	1    4750 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP16
+U 1 1 5AE94703
+P 4950 7200
+F 0 "TP16" H 4950 7500 50  0000 C BNN
+F 1 "TP_MISO" H 4950 7450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4950 7200 50  0001 C CNN
+F 3 "" H 4950 7200 50  0001 C CNN
+	1    4950 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:TEST TP17
+U 1 1 5AE947EB
+P 5150 6900
+F 0 "TP17" H 5150 7200 50  0000 C BNN
+F 1 "TP_CSO" H 5150 7150 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5150 6900 50  0001 C CNN
+F 3 "" H 5150 6900 50  0001 C CNN
+	1    5150 6900
+	-1   0    0    1   
+$EndComp
+Text GLabel 8450 3000 0    60   BiDi ~ 0
+SCLK
+Text GLabel 8150 3100 0    60   BiDi ~ 0
+MOSI
+Text GLabel 8450 3250 0    60   BiDi ~ 0
+GPIO4
+Text GLabel 8450 3650 0    60   BiDi ~ 0
+GPIO12
+Text GLabel 8050 3750 0    60   BiDi ~ 0
+GPIO13
+Text GLabel 8450 3850 0    60   BiDi ~ 0
+GPIO14
+Text GLabel 8050 3950 0    60   BiDi ~ 0
+GPIO16
+Text GLabel 8450 3500 0    60   BiDi ~ 0
+GPIO2
+Text GLabel 8100 3400 0    60   BiDi ~ 0
+GPIO15
+Text Label 10550 2650 0    60   ~ 0
+G0
+Text Label 10550 2750 0    60   ~ 0
+G1
+Text Label 10550 2850 0    60   ~ 0
+G2
+Text Label 10550 2950 0    60   ~ 0
+G3
+Text Label 10550 3050 0    60   ~ 0
+G4
+Text Label 10550 3150 0    60   ~ 0
+G5
+Text Label 10550 3250 0    60   ~ 0
+G6
+Text Label 10550 3350 0    60   ~ 0
+G7
+Text Label 10550 3450 0    60   ~ 0
+G8
+Text Label 10550 3550 0    60   ~ 0
+G9
+Text Label 10550 3650 0    60   ~ 0
+G10
+Text Label 10550 3750 0    60   ~ 0
+G11
+Text Label 10550 3850 0    60   ~ 0
+G12
+Text Label 10550 3950 0    60   ~ 0
+G13
+Text Label 10550 4050 0    60   ~ 0
+G14
+Text Label 10550 4150 0    60   ~ 0
+G15
+Entry Wire Line
+	10450 3650 10550 3750
+Entry Wire Line
+	10450 3650 10550 3750
+Entry Wire Line
+	10450 3650 10550 3750
+Text Label 10250 3200 1    60   ~ 0
+R[0..15]
+Text Label 10050 3350 0    60   ~ 0
+G[0..15]
+Text Label 10250 3500 3    60   ~ 0
+B[0..15]
+$Comp
+L cube-rescue:Conn_01x04 J20
+U 1 1 5B35F197
+P 10100 5750
+F 0 "J20" H 10100 5950 50  0000 C CNN
+F 1 "ANODE_conn" H 10100 5450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 10100 5750 50  0001 C CNN
+F 3 "" H 10100 5750 50  0001 C CNN
+	1    10100 5750
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	9650 5550 9750 5650
+Entry Wire Line
+	9650 5650 9750 5750
+Entry Wire Line
+	9650 5750 9750 5850
+Entry Wire Line
+	9650 5850 9750 5950
+Text Label 9750 5650 0    60   ~ 0
+A0
+Text Label 9750 5750 0    60   ~ 0
+A1
+Text Label 9750 5850 0    60   ~ 0
+A2
+Text Label 9750 5950 0    60   ~ 0
+A3
+Text Label 9700 5000 0    60   ~ 0
+A[0..3]
+$Comp
+L cube-rescue:+3.3V #PWR06
+U 1 1 5B341F49
+P 3850 2750
+F 0 "#PWR06" H 3850 2600 50  0001 C CNN
+F 1 "+3.3V" H 3850 2890 50  0000 C CNN
+F 2 "" H 3850 2750 50  0001 C CNN
+F 3 "" H 3850 2750 50  0001 C CNN
+	1    3850 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L cube-rescue:VBUS #PWR07
+U 1 1 5B34C8A9
+P 2400 2650
+F 0 "#PWR07" H 2400 2500 50  0001 C CNN
+F 1 "VBUS" H 2400 2800 50  0000 C CNN
+F 2 "" H 2400 2650 50  0001 C CNN
+F 3 "" H 2400 2650 50  0001 C CNN
+	1    2400 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L cube-rescue:+3.3V #PWR08
+U 1 1 5B34FED6
+P 7150 3600
+F 0 "#PWR08" H 7150 3450 50  0001 C CNN
+F 1 "+3.3V" H 7150 3740 50  0000 C CNN
+F 2 "" H 7150 3600 50  0001 C CNN
+F 3 "" H 7150 3600 50  0001 C CNN
+	1    7150 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L cube-rescue:+5V #PWR09
+U 1 1 5B34C49D
+P 3650 2650
+F 0 "#PWR09" H 3650 2500 50  0001 C CNN
+F 1 "+5V" H 3650 2790 50  0000 C CNN
+F 2 "" H 3650 2650 50  0001 C CNN
+F 3 "" H 3650 2650 50  0001 C CNN
+	1    3650 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2200 1600 2200
+Wire Wire Line
+	1250 2300 1250 2350
+Wire Wire Line
+	10550 850  10700 850 
+Wire Wire Line
+	10550 950  10700 950 
+Wire Wire Line
+	10550 1050 10700 1050
+Wire Wire Line
+	10550 1150 10700 1150
+Wire Wire Line
+	10550 1250 10700 1250
+Wire Wire Line
+	10550 1350 10700 1350
+Wire Wire Line
+	10550 1450 10700 1450
+Wire Wire Line
+	10550 1550 10700 1550
+Wire Wire Line
+	10550 1650 10700 1650
+Wire Wire Line
+	10550 1750 10700 1750
+Wire Wire Line
+	10550 1850 10700 1850
+Wire Wire Line
+	10550 1950 10700 1950
+Wire Wire Line
+	10550 2050 10700 2050
+Wire Wire Line
+	10550 2150 10700 2150
+Wire Wire Line
+	10550 2250 10700 2250
+Wire Wire Line
+	10550 2350 10700 2350
+Wire Wire Line
+	10550 2650 10700 2650
+Wire Wire Line
+	10550 2750 10700 2750
+Wire Wire Line
+	10550 2850 10700 2850
+Wire Wire Line
+	10550 2950 10700 2950
+Wire Wire Line
+	10550 3050 10700 3050
+Wire Wire Line
+	10550 3150 10700 3150
+Wire Wire Line
+	10550 3250 10700 3250
+Wire Wire Line
+	10550 3350 10700 3350
+Wire Wire Line
+	10550 3450 10700 3450
+Wire Wire Line
+	10550 3550 10700 3550
+Wire Wire Line
+	10550 3650 10700 3650
+Wire Wire Line
+	10550 3750 10700 3750
+Wire Wire Line
+	10550 3850 10700 3850
+Wire Wire Line
+	10550 3950 10700 3950
+Wire Wire Line
+	10550 4050 10700 4050
+Wire Wire Line
+	10550 4150 10700 4150
+Wire Wire Line
+	10550 4450 10700 4450
+Wire Wire Line
+	10550 4550 10700 4550
+Wire Wire Line
+	10550 4650 10700 4650
+Wire Wire Line
+	10550 4750 10700 4750
+Wire Wire Line
+	10550 4850 10700 4850
+Wire Wire Line
+	10550 4950 10700 4950
+Wire Wire Line
+	10550 5050 10700 5050
+Wire Wire Line
+	10550 5150 10700 5150
+Wire Wire Line
+	10550 5250 10700 5250
+Wire Wire Line
+	10550 5350 10700 5350
+Wire Wire Line
+	10550 5450 10700 5450
+Wire Wire Line
+	10550 5550 10700 5550
+Wire Wire Line
+	10550 5650 10700 5650
+Wire Wire Line
+	10550 5750 10700 5750
+Wire Wire Line
+	10550 5850 10700 5850
+Wire Wire Line
+	10550 5950 10700 5950
+Wire Wire Line
+	2850 3050 2750 3050
+Wire Wire Line
+	2750 3050 2750 2700
+Connection ~ 2750 2700
+Wire Wire Line
+	3950 3050 4000 3050
+Wire Wire Line
+	3950 3150 4050 3150
+Wire Wire Line
+	3950 3250 4400 3250
+Wire Wire Line
+	4050 3150 4050 2950
+Wire Wire Line
+	4050 2950 5000 2950
+Wire Wire Line
+	4000 3050 4000 2850
+Wire Wire Line
+	4000 2850 5000 2850
+Wire Wire Line
+	3950 3350 4000 3350
+Wire Wire Line
+	6850 3850 6850 3800
+Wire Wire Line
+	6800 3150 6850 3150
+Wire Wire Line
+	6800 3250 7250 3250
+Connection ~ 6050 1850
+Wire Wire Line
+	5850 1850 5900 1850
+Wire Wire Line
+	6350 1850 6400 1850
+Connection ~ 6400 1850
+Wire Wire Line
+	7250 3050 6800 3050
+Wire Wire Line
+	6800 3550 6850 3550
+Wire Wire Line
+	6850 3600 6850 3550
+Connection ~ 6850 3550
+Wire Wire Line
+	6800 3450 7250 3450
+Wire Wire Line
+	6800 3350 6850 3350
+Wire Wire Line
+	6800 2950 6850 2950
+Wire Wire Line
+	6800 2850 7250 2850
+Wire Wire Line
+	5650 4050 5650 4100
+Wire Wire Line
+	5750 4050 5750 4500
+Wire Wire Line
+	5850 4050 5850 4100
+Wire Wire Line
+	5950 4050 5950 4500
+Wire Wire Line
+	6050 4050 6050 4100
+Wire Wire Line
+	6150 4050 6150 4500
+Wire Wire Line
+	6050 2150 6050 2200
+Wire Wire Line
+	6050 1850 6050 1950
+Wire Wire Line
+	6400 1100 6400 1350
+Wire Wire Line
+	4600 3150 5000 3150
+Wire Wire Line
+	5000 3050 4950 3050
+Wire Wire Line
+	5000 3550 5000 3750
+Wire Wire Line
+	4550 3450 4700 3450
+Wire Wire Line
+	4950 3350 5000 3350
+Wire Wire Line
+	4400 3350 4400 3250
+Connection ~ 4400 3250
+Wire Wire Line
+	4700 3500 4700 3450
+Wire Wire Line
+	5000 3750 4700 3750
+Wire Wire Line
+	4700 3700 4700 3750
+Connection ~ 4700 3750
+Wire Wire Line
+	4550 3500 4550 3450
+Connection ~ 4700 3450
+Wire Wire Line
+	5900 2000 5900 1850
+Connection ~ 5900 1850
+Wire Wire Line
+	5850 1600 6150 1600
+Wire Wire Line
+	6350 1600 6400 1600
+Wire Wire Line
+	6350 1350 6400 1350
+Connection ~ 6400 1600
+Wire Wire Line
+	6350 1100 6400 1100
+Connection ~ 6400 1350
+Wire Wire Line
+	6150 1350 5850 1350
+Wire Wire Line
+	5850 1100 6150 1100
+Wire Wire Line
+	4750 1650 4850 1650
+Wire Wire Line
+	4850 1650 4850 1700
+Wire Wire Line
+	4050 1700 4050 1650
+Wire Wire Line
+	4050 1650 4150 1650
+Wire Notes Line
+	3800 1250 5100 1250
+Wire Notes Line
+	5100 1250 5100 2200
+Wire Notes Line
+	5100 2200 3800 2200
+Wire Notes Line
+	3800 2200 3800 1250
+Wire Wire Line
+	1500 2700 1600 2700
+Wire Wire Line
+	1600 2600 1700 2600
+Connection ~ 1600 2600
+Wire Wire Line
+	2100 2700 2400 2700
+Wire Wire Line
+	1950 6800 1950 6900
+Wire Wire Line
+	2150 6800 2150 7200
+Wire Wire Line
+	2350 6900 2350 6800
+Wire Wire Line
+	2550 6800 2550 7200
+Wire Wire Line
+	2750 6800 2750 6900
+Wire Wire Line
+	2950 6800 2950 7200
+Wire Wire Line
+	3150 6900 3150 6800
+Wire Wire Line
+	3350 6800 3350 7200
+Wire Wire Line
+	3550 6900 3550 6800
+Wire Wire Line
+	3750 6800 3750 7200
+Wire Wire Line
+	3950 6800 3950 6900
+Wire Wire Line
+	4150 6800 4150 7200
+Wire Wire Line
+	4350 6800 4350 6900
+Wire Wire Line
+	4550 6800 4550 7200
+Wire Wire Line
+	4750 6800 4750 6900
+Wire Wire Line
+	4950 6800 4950 7200
+Wire Wire Line
+	5150 6800 5150 6900
+Wire Wire Line
+	8450 3000 8500 3000
+Wire Wire Line
+	8150 3100 8500 3100
+Wire Wire Line
+	8450 3250 8500 3250
+Wire Wire Line
+	8100 3400 8500 3400
+Wire Wire Line
+	8500 3500 8450 3500
+Wire Wire Line
+	8450 3650 8500 3650
+Wire Wire Line
+	8500 3750 8050 3750
+Wire Wire Line
+	8050 3950 8500 3950
+Wire Wire Line
+	8500 3850 8450 3850
+Wire Bus Line
+	10000 3450 10250 3450
+Wire Bus Line
+	10250 3450 10250 4300
+Wire Bus Line
+	10250 4300 10450 4300
+Wire Bus Line
+	10000 3350 10450 3350
+Wire Bus Line
+	10000 3250 10250 3250
+Wire Bus Line
+	10250 3250 10250 2350
+Wire Bus Line
+	10250 2350 10450 2350
+Wire Bus Line
+	10000 3550 10100 3550
+Wire Bus Line
+	10100 3550 10100 5000
+Wire Wire Line
+	9900 5650 9750 5650
+Wire Wire Line
+	9900 5750 9750 5750
+Wire Wire Line
+	9900 5850 9750 5850
+Wire Wire Line
+	9900 5950 9750 5950
+Wire Bus Line
+	10100 5000 9650 5000
+Wire Wire Line
+	3550 2750 3850 2750
+Wire Wire Line
+	3550 2650 3650 2650
+Wire Wire Line
+	7150 3550 7150 3600
+Wire Wire Line
+	2400 2650 2400 2700
+Connection ~ 2400 2700
+Wire Wire Line
+	2750 2700 2850 2700
+Wire Wire Line
+	6050 1850 6150 1850
+Wire Wire Line
+	6400 1850 6450 1850
+Wire Wire Line
+	6850 3550 7150 3550
+Wire Wire Line
+	4400 3250 5000 3250
+Wire Wire Line
+	4700 3750 4700 3800
+Wire Wire Line
+	4700 3450 5000 3450
+Wire Wire Line
+	5900 1850 6050 1850
+Wire Wire Line
+	6400 1600 6400 1850
+Wire Wire Line
+	6400 1350 6400 1600
+Wire Wire Line
+	1600 2700 1600 2600
+Wire Wire Line
+	1600 2600 1600 2200
+Wire Wire Line
+	2400 2700 2750 2700
+Wire Wire Line
+	1200 3300 1200 3400
+Wire Wire Line
+	1500 2900 2600 2900
+Wire Wire Line
+	2600 2900 2600 3150
+Wire Wire Line
+	2600 3150 2850 3150
+Wire Wire Line
+	1500 3000 2500 3000
+Wire Wire Line
+	2500 3000 2500 3250
+Wire Wire Line
+	2500 3250 2850 3250
+Wire Bus Line
+	9650 5000 9650 5850
+Wire Bus Line
+	10450 3350 10450 4050
+Wire Bus Line
+	10450 2550 10450 3350
+Wire Bus Line
+	10450 4300 10450 5850
+Wire Bus Line
+	10450 750  10450 2350
+$EndSCHEMATC

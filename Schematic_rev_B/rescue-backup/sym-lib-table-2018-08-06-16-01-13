@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name ESP8266)(type Legacy)(uri /home/mra/kicad/libraries/kicad-ESP8266/ESP8266.lib)(options "")(descr ""))
+  (lib (name cp2102)(type Legacy)(uri /home/mra/kicad/libraries/automote-kicad-library-library/cp2102.lib)(options "")(descr ""))
+  (lib (name usblc6)(type Legacy)(uri /home/mra/Pc_Sync/KiCad_libs/usblc6.lib)(options "")(descr ""))
+)
